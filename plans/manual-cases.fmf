@@ -1,0 +1,5 @@
+discover:
+  how: fmf
+execute:
+  how: tmt
+summary: All manual test cases for the installer
