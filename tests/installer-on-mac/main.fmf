@@ -27,12 +27,6 @@ tag:
     - ipi
     - platform:AWS
 
-# A link to original Polarion test case
-# A link to Jira test case workitem as for this manual test case,
-# we want to store manual test run results in Jira
-link:
-  - relates: https://polarion.engineering.redhat.com/polarion/#/project/OSE/workitem?id=OCP-2368
-
 # Polarion test case did not specified details of installation. Let's say we can have two variants (tests)
 
 # definition of first test case
@@ -46,8 +40,10 @@ link:
     tag+:
         - 'installer_os:sequoia'
         - 'installer_arch:x86_64'
-    # link to Jira Test Case Workitem that will store results for this manual test
     link+:
+        # link to original Polarion test case
+        - relates: https://polarion.engineering.redhat.com/polarion/#/project/OSE/workitem?id=OCP-24403
+        # link to Jira Test Case Workitem that will store results for this manual test
         - duplicated-by: https://stage-redhat.atlassian.net/browse/RHELTEST-3637
 
 # definition of second test case
@@ -60,4 +56,5 @@ link:
         - 'installer_os:tahoe'
         - 'installer_arch:arm64'
     link+:
+        - relates: https://polarion.engineering.redhat.com/polarion/#/project/OSE/workitem?id=OCP-24689
         - duplicated-by: https://stage-redhat.atlassian.net/browse/RHELTEST-3636
